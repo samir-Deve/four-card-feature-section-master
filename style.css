@@ -1,0 +1,128 @@
+body {
+	background-color: beige;
+	font-size: 15px;
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Poppins', sans-serif; 
+}
+
+
+.wrapper {
+	border: 1px solid black;
+	background-color: white;
+	padding: 20px 20px;
+}
+
+.wrapper .headelines {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper .headelines span{
+	font-size: 1.3em;
+	font-weight: 500;
+	color: gray;
+}
+
+.wrapper .headelines h3 {
+	font-weight: 550;
+	font-size: 1.5em;
+}
+
+.wrapper .headelines .info {
+	text-align: center;
+	font-size: 1em;
+}
+
+.wrapper .cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	gap: 20px;
+	margin-top: 50px;
+}
+
+.wrapper .cards .card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 1px 0px 20px rgb(209, 207, 207);
+	border-radius: 10px;
+	background-color: lightblue;
+	overflow: hidden;
+	padding-top: 5px;
+	margin-top: 10px;
+	width: 100%;
+	max-width: 352px;
+	height: 280px;
+}
+
+.wrapper .cards .card.tow {
+	background-color: red;
+}
+
+.wrapper .cards .card.three {
+	background-color: rgb(255, 221, 0);
+}
+
+.wrapper .cards .card.four {
+	background-color: blue;
+}
+
+.wrapper .cards .card .card_texts {
+	padding-bottom: 20px;
+	background-color: white;
+	padding: 0px 15px;
+
+}
+
+.wrapper .cards .card .img_cont {
+	display: flex;
+	justify-content: flex-end;
+	background-color: white;
+	padding: 20px 20px;
+	flex-grow: 1;
+}
+
+.wrapper .cards .card .card_texts .card_info {
+	font-size: 0.9em;
+	color: rgb(168, 166, 166);
+}
+
+.wrapper .cards .card img {
+	width: 80px;
+	height: 80px;
+	align-self: flex-end;
+	background-color: white;
+}
+
+@media (min-width: 768px) {
+	.wrapper .cards {
+		display: grid;
+		grid-template-columns: repeat(2, 352px);
+	}
+}
+
+
+@media (min-width: 1200px) {
+	.wrapper .cards {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	
+		justify-content: center;
+	}
+
+	.wrapper .cards .card.one {
+		transform: translateY(50%);
+	}
+
+	.wrapper .cards .card.three {
+		transform: translateY(50%);
+	}
+	
+}
